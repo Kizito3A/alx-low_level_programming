@@ -1,5 +1,6 @@
-#ifindef _main_h_
-#define _main_h_
+#ifndef MAIN_H_INCLUDED
+
+#define MAIN_H_INCLUDED
 
 int _putchar(char c);
 void print_alphabet(void);
@@ -13,5 +14,6 @@ void jack_bauer(void);
 void times_table(void);
 int add(int, int);
 void print_to_98(int n);
+
 
 #endif
