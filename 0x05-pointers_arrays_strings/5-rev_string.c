@@ -13,7 +13,7 @@ int length = 0;
 
 for (i = 0; s[i]; i++)
 {
-lenght++;
+length++;
 }
 
 count = length;
