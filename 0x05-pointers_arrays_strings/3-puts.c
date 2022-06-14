@@ -4,7 +4,7 @@
  * @str: A pointer to an int that will be changed
  * Return: void which means our answer is correct
  */
-void _putschar(char *str)
+void _puts(char *str)
 {
 char *c;
 int m;
