@@ -30,7 +30,8 @@ if (is_numerical(s[i]))
 number = (s[i] - 48) + number * 10;
 
 if (s[i + 1] == ' ')
-break;	
+break;
+
 }
 else if (s[i] == '-')
 {
@@ -38,5 +39,5 @@ sign *= -1;
 }
 
 }
-return (number * sign);
+return(number * sign);
 }
