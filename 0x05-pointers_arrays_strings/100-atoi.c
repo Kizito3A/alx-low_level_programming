@@ -39,5 +39,5 @@ sign *= -1;
 }
 
 }
-return(number * sign);
+return (number *sign);
 }
