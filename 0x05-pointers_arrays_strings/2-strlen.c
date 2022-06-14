@@ -12,7 +12,7 @@ int u;
 u = 0;
 while(s[u] != '\0')
 {
-u++
+u++;
 }
 return(u);
 }
