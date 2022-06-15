@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _strncat - concatenate two strings
- * @dest: A pointer to a character that will be changed
- * @src:  Apointer to a character that will be chanaged
- * @n:value
- * Retuen: dest
+ * _strncat - Concatenates two strings,
+ * @dest: Destination.
+ * @src:  source.
+ * @n: prints amount of bytes used from source
+ * Retuen: the pointer to the destination
  */
 char *_strncat(char *dest, char *src, int n)
 {
