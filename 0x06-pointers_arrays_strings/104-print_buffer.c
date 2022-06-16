@@ -71,8 +71,9 @@ printHexes(b, start, end);
 printASCII(b, start, end);
 printf("\n");
 }
-} else
-
-printf("\n");
 
 }
+else
+printf("\n");
+}
+
