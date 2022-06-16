@@ -19,7 +19,7 @@ for (i = 0; i < n - 1; i++)
 end_c++;
 }
 
-for (i = 0; i < n /2; i++)
+for (i = 0; i < n / 2; i++)
 {
 
 c = *end_c;
