@@ -18,6 +18,7 @@ while (accept[j] != '\0')  /*Evaluating *accept*/
 if (*s == accept[j])
 {
 return (s);
+
 }	
 j++; /*add j+1*/
 }
