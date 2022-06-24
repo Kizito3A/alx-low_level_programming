@@ -4,6 +4,7 @@
 #include <string.h>
 
 /**
+ * main - Entry point
  * check_num - check - string there are digit
  * @str: array str
  *
@@ -31,7 +32,7 @@ return (1);
 }
 
 /**
- * main - Print the name of the program
+ * main - Entry point
  * @argc: Count arguments
  * @argv: Arguments
  *
