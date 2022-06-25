@@ -2,55 +2,44 @@
 #include <stdlib.h>
 
 /**
- * main - function
- * @argc: length of argv
- * @argv: number of argument
- * Return: Always 0
+ * main - print min number of coins to return change using 25, 10, 5, 2, 1
+ * @argc:  the size of the argv array, the number of command line arguments
+ * @argv: an array containing the program command line arguments
+ * Return: 1 if error 0 if success
  */
 
 int main(int argc, char *argv[])
 {
-
-/*Declaring variables*/
-int position, total, change, aux;
-int coins[] = {25, 10, 5, 2, 1}; /*Array int*/
-
-position = total = change = aux = 0;
-
+int cents, remainder, coins;
+int quarters, dimes, nickles, twos, pennies;
 
 if (argc != 2)
 {
-
 printf("Error\n");
 return (1);
 }
 
-total = atoi(argv[1]); /*Covert str to int*/
+else
 
-if (total <= 0)
+cents = atoi(argv[1]);
+if (cents <= 0)
+
 {
 printf("0\n");
 return (0);
 }
 
-/*Declaring While*/
+quarters = cents / 25;
+remainder = cents % 25;
+dimes = remainder / 10;
+remainder = remainder % 10;
+nickles = remainder / 5;
+remainder = remainder % 5;
+twos = remainder / 2;
+remainder = remainder % 2;
+pennies = remainder / 1;
 
-while (coins[position] != '\0')
-
-{
-if (total >= coins[position])
-{
-
-aux = (total / coins[position]);
-change += aux;
-total -= coins[position] * aux;
-}
-
-position++;
-
-}
-
-printf("%d\n", change);
+coins = quarters + dimes + nickles + twos + pennies;
+printf("%d\n", coins);
 return (0);
 }
-
