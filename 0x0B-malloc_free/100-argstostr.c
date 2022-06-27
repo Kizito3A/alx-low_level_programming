@@ -40,5 +40,5 @@ c++;
 str[c] = '\n';
 c++;
 }
-return(str);
+return (str);
 }
