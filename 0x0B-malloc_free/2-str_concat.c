@@ -1,61 +1,58 @@
 #include "main.h"
-/**
- * _strlen - count arrray
- * @s: array of elements
- * Return: i
- */
-
-int _strlen(char *s)
-{
-unsigned int i;
-i = 0;
-while (s[i] != '\0') /*Count character of string*/
-{
-i++;
-}
-
-return (i);
-}
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * str_concat - back a pointer to array
- * @s1: Array one
- * @s2: Array two
- * Return: Always an array dinamic
+ * str_concat - function that concatenates two strings
+ * @s1: string of chars
+ * @s2: string of chars
+ *
+ * Return: address of the newly allocated memory
  */
-
 char *str_concat(char *s1, char *s2)
 {
-char *dst;
-unsigned int i, j, size;
-/*If the array is empty*/
+unsigned int len1, len2;
+unsigned int i, j;
+char *str_copy;
+char *tmp1 = s1;
+char *tmp2 = s2;
 
 if (s1 == NULL)
-{
 s1 = "";
-
 if (s2 == NULL)
 s2 = "";
 
-/*count size total*/
-size = (_strlen(s1) + _strlen(s2) + 1);
-/*malloc*/
-
-dst = (char *) malloc(size *sizeof(char));
-if (dst == 0)
-{
-return (NULL);
-}
-/*Concatenate arrays*/
-
-for (i = 0; *(s1 + i) != '\0'; i++)
-*(dst + i) = *(s1 + i);
-
-for (j = 0; *(s2 + j) != '\0'; j++)
-{
-*(dst + i) = *(s2 + j);
-}
+i = 0;
+while (*s1++)
 i++;
+len1 = i;
+s1 = tmp1;
+
+i = 0;
+while (*s2++)
+i++;
+len2 = i;
+s2 = tmp2;
+
+str_copy = malloc((len1 + len2) * sizeof(char) + 1);
+if (str_copy == NULL)
+return (NULL);
+
+j = 0;
+while (j < len1)
+{
+
+str_copy[j] = s1[j];
+j++;
+
 }
-return (dst);
+
+while (j < len1 + len2)
+{
+str_copy[j] = s2[j - len1];
+j++;
+}
+
+str_copy[j] = '\0';
+return (str_copy);
 }
